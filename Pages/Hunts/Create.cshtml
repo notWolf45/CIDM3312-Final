@@ -1,0 +1,74 @@
+@page
+@model CIDM3312_Final.Pages.Hunts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Hunt</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Hunt.Monster" class="control-label"></label>
+                <input asp-for="Hunt.Monster" class="form-control" />
+                <span asp-validation-for="Hunt.Monster" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H1Name" class="control-label"></label>
+                <input asp-for="Hunt.H1Name" class="form-control" />
+                <span asp-validation-for="Hunt.H1Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H1Dmg" class="control-label"></label>
+                <input asp-for="Hunt.H1Dmg" class="form-control" />
+                <span asp-validation-for="Hunt.H1Dmg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H2Name" class="control-label"></label>
+                <input asp-for="Hunt.H2Name" class="form-control" />
+                <span asp-validation-for="Hunt.H2Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H2Dmg" class="control-label"></label>
+                <input asp-for="Hunt.H2Dmg" class="form-control" />
+                <span asp-validation-for="Hunt.H2Dmg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H3Name" class="control-label"></label>
+                <input asp-for="Hunt.H3Name" class="form-control" />
+                <span asp-validation-for="Hunt.H3Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H3Dmg" class="control-label"></label>
+                <input asp-for="Hunt.H3Dmg" class="form-control" />
+                <span asp-validation-for="Hunt.H3Dmg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H4Name" class="control-label"></label>
+                <input asp-for="Hunt.H4Name" class="form-control" />
+                <span asp-validation-for="Hunt.H4Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hunt.H4Dmg" class="control-label"></label>
+                <input asp-for="Hunt.H4Dmg" class="form-control" />
+                <span asp-validation-for="Hunt.H4Dmg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

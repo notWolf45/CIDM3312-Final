@@ -1,0 +1,84 @@
+@page
+@model CIDM3312_Final.Pages.Hunts.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].Monster)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H1Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H1Dmg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H2Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H2Dmg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H3Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H3Dmg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H4Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunt[0].H4Dmg)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Hunt) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monster)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H1Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H1Dmg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H2Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H2Dmg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H3Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H3Dmg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H4Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H4Dmg)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.HuntID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.HuntID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.HuntID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

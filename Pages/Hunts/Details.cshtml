@@ -1,0 +1,73 @@
+@page
+@model CIDM3312_Final.Pages.Hunts.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Hunt</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.Monster)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.Monster)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H1Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H1Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H1Dmg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H1Dmg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H2Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H2Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H2Dmg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H2Dmg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H3Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H3Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H3Dmg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H3Dmg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H4Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H4Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunt.H4Dmg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hunt.H4Dmg)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Hunt.HuntID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
