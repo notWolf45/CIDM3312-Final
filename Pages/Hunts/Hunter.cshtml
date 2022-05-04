@@ -16,7 +16,13 @@
         </form>
     </div>
     <div class="col-6 border">
-        <p>"Name @Model.FirstName @Model.LastName"</p>
+        @if (Model.Hunter != null)
+        {
+        <p>"Name: @Model.Hunter.Name"</p>
+        <p>"HR: @Model.Hunter.HRank"</p>
+        <p>"MR: @Model.Hunter.MRank"</p>
+        <p>"Total Damage: @Model.Hunter.TDmg"</p>
+        }
     </div>
 </div>
 @section Scripts {

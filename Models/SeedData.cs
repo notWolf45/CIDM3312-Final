@@ -58,6 +58,7 @@ namespace CIDM3312_Final.Models
                     new Hunt {Monster = "Pukei-Pukei", H1Name = "NoaH", H1Dmg = 7500, H2Name = "Leana", H2Dmg = 7500, H3Name = "Akaviria", H3Dmg = 7500, H4Name = "FiteNite", H4Dmg = 7500,},
                 };
                 context.AddRange(hunts);
+                context.SaveChanges();
 
                  List<HuntersHunt> hdmg = new List<HuntersHunt> {
                     new HuntersHunt {HunterID = 1, HuntID = 1},

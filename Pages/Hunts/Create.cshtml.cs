@@ -30,6 +30,18 @@ namespace CIDM3312_Final.Pages.Hunts
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            foreach (var h in _context.Hunters.ToList()){
+                if(h.Name == Hunt.H1Name){
+                    h.TDmg += Hunt.H1Dmg;
+                } else if(h.Name == Hunt.H2Name){
+                    h.TDmg += Hunt.H2Dmg;
+                } else if(h.Name == Hunt.H3Name){
+                    h.TDmg += Hunt.H3Dmg;
+                } else if(h.Name == Hunt.H4Name){
+                    h.TDmg += Hunt.H4Dmg;
+                }
+            }
+
             if (!ModelState.IsValid)
             {
                 return Page();

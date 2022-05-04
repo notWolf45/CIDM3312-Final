@@ -14,7 +14,14 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Hunt[0].Monster)
+                @{
+                    var firstSort = "first_asc";
+                    if (Model.CurrentSort == "first_asc")
+                    {
+                        firstSort = "first_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@firstSort">@Html.DisplayNameFor(model => model.Hunt[0].Monster)</a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Hunt[0].H1Name)
@@ -82,3 +89,19 @@
 }
     </tbody>
 </table>
+<hr/>
+@{
+    var prevDisable="";
+    if (Model.PageNum <= 1)
+    {
+        prevDisable = "disabled";
+    }
+}
+
+<nav aria-label="Page navigation example">
+ <ul class="pagination">
+   <li class="page-item" @prevDisable><a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a></li>
+     <li class="page-item"><a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a></li>
+  </ul>
+</nav>
+
